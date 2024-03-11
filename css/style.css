@@ -1,0 +1,778 @@
+/* Sticky footer */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+#wrapper:before {
+  /* Opera and IE8 "redraw" bug fix */
+  content: "";
+  float: left;
+  height: 100%;
+  margin-top: -999em;
+}
+
+* html #wrapper {
+  /* IE6 workaround */
+  height: 100%;
+}
+
+/* Sticky footer */
+
+body {
+  background-image: url("../images/paper.png");
+  font-size: 16px;
+  font-family: "open_sansregular", arial, verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+}
+
+/* GOOGLE FONTS */
+
+@font-face {
+  font-family: "open_sansregular";
+  src: url("../fonts/opensans-webfont.eot");
+  src: url("../fonts/opensans-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-webfont.woff2") format("woff2"), url("../fonts/opensans-webfont.woff") format("woff"), url("../fonts/opensans-webfont.ttf") format("truetype"), url("../fonts/opensans-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* GOOGLE FONTS */
+
+#wrapper {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 100%;
+  background-color: #fff;
+  box-shadow: -3px 0 5px 0 #ddd, 3px 0 5px 0 #ddd;
+  -moz-box-shadow: -3px 0 5px 0 #ddd, 3px 0 5px 0 #ddd;
+  -webkit-box-shadow: -3px 0 15px 0 #ddd, 3px 0 5px 0 #ddd;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/*=====================================================
+NAVIGATION
+=======================================================*/
+
+.container>.navbar-header {
+  margin-left: 5px;
+}
+
+.navbar-default {
+  background-color: #4285f4;
+  padding: 12px 0 6px;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.navbar .logo {
+  float: left;
+  list-style-type: none;
+}
+
+.navbar .logo li a {
+  text-decoration: none;
+}
+
+.navbar ul li a {
+  color: #fff;
+  margin-top: 5px;
+}
+
+.navbar-default .navbar-nav>li>a {
+  font-size: 18px;
+  line-height: 2;
+  padding: 10px 15px;
+  color: #fff !important;
+  cursor: pointer;
+}
+
+.navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  font-weight: 100;
+  color: #fff;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.navbar-default .navbar-nav>.active>a {
+  font-weight: 100;
+  color: #fff;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #fff;
+}
+
+.navbar-default ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.navbar-default ul li a {
+  display: inline;
+  font-size: 20px;
+}
+
+.navbar-default .navbar-toggle {
+  border: none;
+  margin-top: -3px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border: none;
+}
+
+.fa-envelope-o, .fa-linkedin-square {
+  vertical-align: middle;
+  color: #fff;
+  padding-right: 7px;
+}
+
+#active {
+  color: #333;
+  border-bottom: 2px solid #fff;
+}
+
+/*=====================================================
+FONT FOR HEADING AND TEXT
+=======================================================*/
+
+.heading {
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 100;
+  color: #111;
+}
+
+.text {
+  font-weight: 100;
+}
+
+/*=====================================================
+JUMBOTRON
+=======================================================*/
+
+.jumbotron {
+  position: relative;
+  height: 100%;
+  margin-bottom: -20px;
+  background-image: url("../images/banner.jpg");
+  background-size: cover;
+}
+
+.jumbotron.background {
+  position: relative;
+  height: 100%;
+  margin-bottom: -20px;
+  background-image: url("../images/portfolio.jpg");
+  background-size: cover;
+}
+
+.jumbotron:before, .jumbotron.background:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.jumbotron h1, .jumbotron.background h1 {
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.jumbotron.background h1 {
+  color: #4285f4;
+  font-size: 24px;
+}
+
+.jumbotron img {
+  margin-right: 50px;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+/*=====================================================
+MAIN & ERROR SECTION HOME PAGE
+=======================================================*/
+
+.main {
+  margin: 30px 0;
+  padding-bottom: 140px;
+  /* Sticky footer */
+  width: 100%;
+  max-width: 1200px;
+  background-color: #fff;
+}
+
+.main a {
+  color: #089de3;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+.fa-file-text {
+  color: #aaa;
+  margin-top: 45px;
+  display: block;
+  text-align: center;
+}
+
+.fa-paint-brush {
+  color: #0198e1;
+  margin-top: 45px;
+  display: block;
+  text-align: center;
+}
+
+.fa-users {
+  color: #ff8f00;
+  margin-top: 45px;
+  display: block;
+  text-align: center;
+}
+
+.main h1.heading {
+  font-size: 18px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.main .text {
+  padding-right: 10px;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.main span {
+  font-size: 18px;
+}
+
+.error-logo img {
+  display: block;
+  margin: 100px auto 0;
+}
+
+.error {
+  overflow: hidden;
+  /* For Scroll bar to appear */
+  margin: 50px 0;
+  padding-bottom: 140px;
+  /* Sticky footer */
+}
+
+.error .heading {
+  padding: 0 10px;
+  margin-bottom: -10px;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.error ul {
+  padding-left: 0;
+  margin: 30px auto 0 auto;
+  text-align: center;
+  list-style-type: none;
+}
+
+.error li {
+  text-indent: -15px;
+  line-height: 1.5;
+}
+
+.error li a.text {
+  color: #089de3;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+.error li a:hover {
+  color: #006994;
+  text-decoration: underline;
+}
+
+/*=====================================================
+MAIN & ERROR SECTION PORTFOLIO PAGE
+=======================================================*/
+
+.content {
+  padding-bottom: 140px;
+  /* Sticky footer */
+}
+
+.main.portfolio {
+  margin-top: 20px;
+  padding: 0 30px;
+  width: 100%;
+  max-width: 1200px;
+  background-color: #fff;
+}
+
+.main.portfolio:nth-of-type(1) {
+  margin: 70px 0 30px;
+}
+
+.main.portfolio .heading {
+  margin: 0 0 -12px;
+  text-align: left;
+}
+
+.main.portfolio h1.heading {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.main.portfolio h2.heading {
+  font-size: 16px;
+  color: #777;
+  margin: 20px 0 -6px;
+}
+
+.main.portfolio h3.heading {
+  font-size: 16px;
+  color: #4285f4;
+}
+
+.main.portfolio h3 span.text {
+  clear: both;
+  font-size: 15px;
+  color: #6f6f6f;
+  padding-left: 5px;
+  margin-top: 5px;
+}
+
+.main-one {
+  clear: both;
+  margin-top: 50px;
+  padding: 0 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.content>article:nth-of-type(6)>section:nth-of-type(8) {
+  margin-bottom: 0;
+}
+
+.content>article:nth-of-type(6)>section:nth-of-type(9) {
+  clear: both;
+  margin: -20px 0 20px 0;
+  width: 100%;
+}
+
+.content>article:nth-of-type(8)>h3 {
+  font-size: 16px;
+  font-weight: 100;
+  color: #4285f4;
+  border-bottom: none;
+  margin-bottom: 50px;
+  width: 85%;
+}
+
+.main-one>h3.heading {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #4285f4;
+}
+
+.main-one span {
+  font-size: 16px;
+  color: #6f6f6f;
+}
+
+.main-one .text {
+  text-align: justify;
+  margin-top: -10px;
+  padding: 0 10px 10px 0;
+}
+
+.main-one h3 .text {
+  clear: both;
+  font-size: 15px;
+  color: #6f6f6f;
+  display: inline-block;
+  padding-left: 5px;
+}
+
+.main-two {
+  clear: both;
+  margin-top: 50px;
+  width: 100%;
+  max-width: 1200px;
+  background-color: #fff;
+  padding: 0 30px 100px;
+}
+
+.main-two>.heading {
+  font-size: 20px;
+}
+
+.web-image {
+  clear: both;
+  float: left;
+  width: 40%;
+  padding-right: 5%;
+  margin-bottom: 50px;
+}
+
+.image-one {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.description {
+  float: left;
+  width: 52%;
+  margin-bottom: 50px;
+}
+
+.description h1 {
+  margin-top: 0;
+  font-size: 16px;
+  color: #4285f4;
+}
+
+.description h3.heading {
+  font-size: 16px;
+  font-weight: 600;
+  color: #777;
+}
+
+/*=====================================================
+FOOTER SECTION
+=======================================================*/
+
+.semi-circle {
+  height: 45px;
+  width: 90px;
+  margin: 0 auto;
+  border-radius: 90px 90px 0 0;
+  -moz-border-radius: 90px 90px 0 0;
+  -webkit-border-radius: 90px 90px 0 0;
+  background-color: #f2f2f2;
+}
+
+.fa-arrow-up {
+  color: #e0e0e0;
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+}
+
+.semi-circle:hover {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.footer {
+  /* height: 140px margin-top: -140px for Sticky footer */
+  width: 100%;
+  max-width: 1200px;
+  height: 114px;
+  margin: -114px auto 0;
+  overflow: hidden;
+}
+
+.footerOne {
+  padding: 23px 0;
+  height: 117px;
+  background-color: #f2f2f2;
+}
+
+.footerOne .fa-envelope-o, .footerOne .fa-linkedin-square {
+  vertical-align: initial;
+  color: #999;
+  padding-right: 7px;
+}
+
+.footerOne .links, .footerOne .copyright {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style-type: none;
+}
+
+.footerOne .links li, .footerOne .copyright li {
+  display: inline-block;
+  padding-left: 0;
+}
+
+.footerOne .copyright li {
+  font-size: 14px;
+  color: #656565;
+}
+
+.footerOne .links li a.text, .footerOne .links li a.text:link, .footerOne .links li a.text:visited, .footerOne .links li a.text:active {
+  color: #089de3;
+  text-decoration: underline;
+}
+
+.footerOne .links li a.text:hover {
+  text-decoration: underline;
+}
+
+.footerOne .links li a:first-child {
+  padding-right: 5px;
+}
+
+/*=====================================================
+MEDIA QUERIES HOME PAGE
+=======================================================*/
+
+@media screen and (min-width: 781px) and (max-width: 991px) {
+  .jumbotron {
+    padding-bottom: 0;
+  }
+  .jumbotron h1 {
+    margin: -10px 0 30px;
+    padding: 0 10px;
+  }
+  .jumbotron h1.jumbotron-heading {
+    text-align: center;
+    margin-top: 0;
+  }
+  .main .text {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 780px) {
+  .navbar-default ul {
+    padding-left: 0;
+  }
+  .jumbotron {
+    padding-bottom: 0;
+  }
+  .jumbotron h1 {
+    margin: 0 0 30px;
+    padding: 0 10px;
+  }
+  .jumbotron h1.jumbotron-heading {
+    text-align: center;
+    margin-top: 0;
+  }
+  .main .text {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-default .navbar-nav>li>a {
+    padding: 4px 15px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 640px) {
+  .navbar-default ul {
+    padding-left: 0;
+  }
+  .jumbotron {
+    padding-bottom: 0;
+  }
+  .jumbotron h1 {
+    margin: 0 0 30px;
+    padding: 0 10px;
+  }
+  .jumbotron h1.jumbotron-heading {
+    text-align: center;
+    margin-top: 0;
+  }
+  .main .text {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-default {
+    padding-bottom: 1px;
+  }
+  .navbar-default ul {
+    padding-left: 0;
+  }
+  .jumbotron {
+    padding-bottom: 0;
+  }
+  .jumbotron h1 {
+    margin: 0 0 30px;
+    padding: 0 10px;
+  }
+  .jumbotron h1.jumbotron-heading {
+    text-align: center;
+    margin-top: 0;
+  }
+  .main .text {
+    padding-left: 10px;
+  }
+}
+
+/*=====================================================
+  MEDIA QUERIES PORTFOLIO AND ERROR PAGE
+=======================================================*/
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .jumbotron {
+    padding-bottom: 0;
+  }
+  .jumbotron h1 {
+    margin: -10px 0 30px;
+    padding: 0 10px;
+  }
+  .main .text {
+    margin-bottom: 15px;
+  }
+  .main.portfolio .text {
+    padding-left: 0;
+  }
+  .main-one h3 {
+    line-height: 1.5;
+  }
+  .main-one h3 span.text {
+    display: inline;
+    padding-left: 5px;
+  }
+}
+
+@media screen and (min-width: 477px) and (max-width: 767px) {
+  .navbar-default {
+    padding-bottom: 1px;
+  }
+  .navbar-default ul {
+    padding-left: 0;
+  }
+  .navbar-default .navbar-nav>li {
+    border-bottom: 1px solid #5693f5
+  }
+  .navbar-default .navbar-nav>li>a {
+    padding: 4px 15px;
+  }
+  .jumbotron {
+    padding-bottom: 0;
+  }
+  .jumbotron h1 {
+    margin: 10px 0 30px;
+    padding: 0 10px;
+  }
+  .main .text {
+    margin-bottom: 15px;
+  }
+  .main.portfolio .text {
+    padding-left: 0;
+  }
+  .main.portfolio h3 span.text {
+    display: inline;
+    line-height: 1;
+    padding-left: 5px;
+  }
+  .main-one h3 {
+    line-height: 1.5;
+  }
+  .main-one h3 span.text {
+    display: inline;
+    padding-left: 5px;
+  }
+  .error-logo img {
+    width: 128px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 476px) {
+  .navbar-default {
+    padding-bottom: 1px;
+  }
+  .navbar-default ul {
+    padding-left: 0;
+  }
+  .navbar-default .navbar-nav>li {
+    border-bottom: 1px solid #5693f5
+  }
+  .navbar-default .navbar-nav>li>a {
+    padding: 4px 15px;
+  }
+  .jumbotron {
+    padding-bottom: 0;
+  }
+  .jumbotron h1 {
+    margin: 10px 0 30px;
+    padding: 0 10px;
+  }
+  .main .heading {
+    margin-top: 15px;
+  }
+  .main .text {
+    margin-bottom: 15px;
+  }
+  .web-image {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+  .description {
+    width: 100%;
+  }
+  .content>article:nth-of-type(6)>section:nth-of-type(9) {
+    margin-bottom: 35px;
+    margin-top: 0;
+  }
+  .content>article:nth-of-type(7)>section:nth-of-type(6) {
+    margin-bottom: 20px;
+  }
+  .main-two h1.heading {
+    line-height: 1.25;
+  }
+  .main.portfolio h2.heading {
+    font-size: 17px;
+    line-height: 1.5;
+  }
+  .main.portfolio h3 span.text {
+    padding-left: 0;
+  }
+  .main.portfolio h3 span.text::first-line {
+    line-height: 1.5;
+  }
+  .main.portfolio .text {
+    font-size: 16px;
+    padding-left: 0;
+  }
+  .main-one h2.heading {
+    font-size: 17px;
+  }
+  .main-one h3 {
+    line-height: 1.5;
+  }
+  .main-one h3 span.text {
+    padding-left: 0;
+    margin-top: 0;
+  }
+  .main-one .text {
+    font-size: 16px;
+  }
+  .error-logo img {
+    width: 128px;
+    height: auto;
+  }
+}
